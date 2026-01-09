@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class Main {
+    public static double endsWithR(String[] names){
+        int sum = 0;
+        for (int i = 0 ; i<names.length ; i++){
+            if (names[i].charAt(names[i].length()-1) == 'r')
+                sum++;
+        }
+        double p =(double)sum/names.length*100;
+        return p;
+    }
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        String[] names = {"Rami", "Nader", "Nadia", "Ghadeer", "Murad"};
+        System.out.printf("There are %% %.2f of people whose names end with 'r' ", endsWithR(names));
+    }
+
+}
