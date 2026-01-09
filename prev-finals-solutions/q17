@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class Main {
+      public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter number of integers: ");
+        int n = input.nextInt();
+        System.out.print("Enter first positive integers: ");
+        int i = 0;
+        int sum = 0;
+        while (i<n){
+            int x = input.nextInt();
+            if (x>0)
+                sum+=Math.pow(x,2);
+            i++;
+        }
+
+        System.out.printf("Sum of the squares of the positive numbers = %d", sum);
+    }
+}
