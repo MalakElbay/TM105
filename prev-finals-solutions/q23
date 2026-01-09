@@ -1,0 +1,17 @@
+import java.util.Scanner;
+public class Main {
+    public static void percentageOfAaS(char[] chars){
+        int sum = 0;
+        for (int i = 0 ; i<chars.length ; i++){
+            if (chars[i] == 'a' || chars[i] == 'A')
+                sum++;
+        }
+        double p = (double)sum/chars.length*100;
+        System.out.printf("%.2f%% of the letters are 'A' or 'a'while 'A' and 'a' have %d occurences in the %d letters", p ,sum , chars.length);
+    }
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        char[] chars = {'a', 'A', 'a', 'c', 'A', 'g', 'F', 'a', 'x','A'};
+        percentageOfAaS(chars);
+    }
+}
