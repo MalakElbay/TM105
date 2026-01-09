@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class Main {
+    public static void averageHeight(double[] heights){
+        double sum = 0;
+        for (int i = 0 ; i<heights.length ; i++){
+            sum+=heights[i];
+        }
+        double average = (double)sum/heights.length;
+        System.out.printf("The average of the buildings in your city is %.2f", average);
+    }
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        double[] heights = {60.7 , 50.8 , 55.2, 40.8 , 49.3 , 52.4};
+        averageHeight(heights);
+    }
+}
