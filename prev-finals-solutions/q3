@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class Main {
+    public static int countMultiplesOf(int[] array, int divisor){
+        int count= 0 ;
+        for (int i = 0 ; i<array.length ; i++){
+            if (array[i]%divisor==0)
+                count++;
+        }
+        return count;
+    }
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter 10 elements of the array: ");
+        int[] numbers = new int[10];
+        for (int i = 0 ; i < 10 ; i++){
+            numbers[i] = input.nextInt();
+        }
+        System.out.print("Enter the divisor: ");
+        int d = input.nextInt();
+        int ans = countMultiplesOf(numbers, d);
+        System.out.printf("There are %d numbers in the array that are divisible by %d", ans, d);
+
+    }
+}
