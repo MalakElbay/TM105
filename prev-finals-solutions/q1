@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int[][] grades = {{12, 15, 12},
+                          {19, 20, 18},
+                          {18, 19, 18},
+                          {14, 19, 14}};
+        int highest;
+        highest = -1;
+        for (int i = 0 ; i<grades.length ; i++){
+            for (int j = 0 ; j<grades[i].length ; j++){
+                if (grades[i][j]>highest)
+                    highest=grades[i][j];
+            }
+        }
+        System.out.println("The highest grade is: "+ highest);
+        int sum;
+        double average;
+        sum = 0;
+        for (int i = 0 ; i<grades.length ; i++){
+            for (int j = 0 ; j<grades[i].length ; j++){
+                sum+=grades[i][j];
+            }
+        }
+        average = (double)sum/12;
+        System.out.printf("The average of the grades is: %.2f", average);
+    }
+}
+
+
