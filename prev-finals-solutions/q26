@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class Main {
+    public static double AverageSalaries(double[] salaries, int employees){
+        double sum = 0;
+        for (int idx = 0; idx<employees ; idx++){
+            sum+=salaries[idx];
+        }
+        return (double)sum/employees;
+    }
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter an employee salary or -1 to stop: ");
+        int i = 0;
+        double[] salaries = new double[20];
+        salaries[i]=input.nextDouble();
+        while (salaries[i]!=-1) {
+            i++;
+            System.out.print("Enter an employee salary or -1 to stop: ");
+            salaries[i] = input.nextDouble();
+        }
+        double average = AverageSalaries(salaries, i);
+        int above = 0;
+        for (int j = 0 ; j<i; j++){
+            if (salaries[j]>average+100)
+                above++;
+        }
+        System.out.printf("The average of the employees' salaries: %.2f\n", average);
+        System.out.printf("There are %d employees whose salaries are exceeding the average by $100",above );
+    }
+}
+
