@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the unit consumed by the costumer: ");
+        int u = input.nextInt();
+        double c;
+        if (u<=200)
+            c=1.5;
+        else if (u<=400)
+            c=1.8;
+        else if (u<=600)
+            c=2.1;
+        else if (u<=800)
+            c=2.5;
+        else
+            c=2.7;
+        double total = c*u;
+        System.out.printf("Total amount to pay = %.2f", total);
+    }
+}
