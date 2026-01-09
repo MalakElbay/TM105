@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int[][] table = {{12,7,11,22}, {13,9,12,10}, {15,11,13,13}};
+        int sum = 0;
+        for (int j = 0 ; j<3 ; j++){
+                sum+=table[j][0];
+        }
+        double average = (double)sum/3;
+        System.out.printf("The average of the first column is: %.2f", average );
+
+
+    }
+}
