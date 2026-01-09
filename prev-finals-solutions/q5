@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the names of the available tools: (\"finish\" to stop): ");
+        String tool = input.next();
+        int h = 0;
+        int t = 0;
+        while(!tool.equals("finish")){
+            t++;
+            if (tool.equals("hammer"))
+                h++;
+            tool = input.next();
+        }
+        System.out.printf("The total number of tools available is: %d\n", h);
+        System.out.printf("The total number of tools available is: %d", t);
+
+    }
+}
