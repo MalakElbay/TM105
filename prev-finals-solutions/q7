@@ -1,0 +1,12 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int[][] table = {{4,6,3,6} , {7,3,8,9} ,{6,10,12,13}};
+        int sum = 0 ;
+        for (int j = 0 ; j<3 ;j++){
+            sum+= table[j][0];
+        }
+        System.out.println("The sum of the 1st column is: "+ sum);
+    }
+}
