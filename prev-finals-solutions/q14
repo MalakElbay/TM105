@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class Main {
+    public static long SumOfPositiveSquares (int[] array){
+        long sum = 0;
+        for (int i = 0 ; i<array.length ; i++){
+            if(array[i]>0)
+                sum+=Math.pow(array[i], 2);
+        }
+        return sum;
+    }    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter a positive integer: ");
+        int x = input.nextInt();
+        System.out.printf("Enter %d integers: ", x);
+        int[] numbers = new int[x];
+        for (int i = 0 ; i<x ; i++){
+            numbers[i]= input.nextInt();
+        }
+        System.out.printf("Sum of squares of the positive numbers = %d", SumOfPositiveSquares(numbers));
+    }
+}
