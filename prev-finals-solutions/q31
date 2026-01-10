@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("In each line, insert a person's name and his/her weight in kilograms");
+        System.out.println("To halt the program, insert \"stop\" as a person's name");
+        String name;
+        int weight;
+        int max = -1;
+        String heaviest = "";
+        while(true){
+            name = input.next();
+            if (name.equals("stop"))
+                break;
+            else
+                weight = input.nextInt();
+            if (weight > max){
+                max = weight;
+                heaviest = name;
+            }
+        }
+        System.out.printf("%s is the heaviest person", heaviest);
+    }
+}
+
