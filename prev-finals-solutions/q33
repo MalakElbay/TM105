@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the number of sky scrapers: ");
+        int n = input.nextInt();
+        System.out.print("Please, insert names and heights of skyscrapers (one per line)\n");
+        String name;
+        int height;
+        int min = 901;
+        String shortest = "";
+        for (int i = 0; i<n ; i++){
+            name = input.next();
+            height = input.nextInt();
+            if (height<min) {
+                min = height;
+                shortest = name;
+            }
+        }
+        System.out.printf("%s is the shortest. its height is %d meters", shortest , min);
+    }
+}
+
