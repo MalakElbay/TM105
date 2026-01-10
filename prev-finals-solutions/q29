@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+       System.out.print("In each line, insert a student's name and his/her GPA\n");
+       System.out.print("To halt the program, insert \"stop\" as a student's name\n");
+       String name;
+       double GPA;
+       double max = -1;
+       String best = "";
+       while (true){
+           name = input.next();
+           if (name.equals("stop")){
+                break;
+            }
+           GPA = input.nextDouble();
+           if (GPA>max){
+               max = GPA;
+               best = name;
+           }
+       }
+       System.out.printf("%s has the highest GPA, which is %.2f", best, max);
+
+    }
+}
+
