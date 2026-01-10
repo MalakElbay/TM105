@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class Main {
+    public static double atLeast3(String[] words){
+        int sum = 0;
+        for (int i = 0 ; i<words.length ; i++){
+            if (words[i].length() >=3)
+                sum++;
+        }
+        System.out.printf("There are %d words, %d of them consist of at least 3 letters.\n", words.length, sum);
+        return (double)sum/words.length*100;
+    }
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        String[] words = {"Java", "is", "a" , "programming", "language"};
+        System.out.printf("So, %.2f%% of the words consist of at least 3 letters", atLeast3(words));
+
+    }
+}
+
