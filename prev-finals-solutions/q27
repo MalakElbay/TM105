@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class Main {
+    public static double sumOf2D_Array(double[][] m ){
+        double sum = 0;
+        for (int i = 0 ; i<m.length ; i++){
+            for (int j = 0 ; j< m[i].length ; j++){
+                sum+=m[i][j];
+            }
+        }
+        return sum;
+    }
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter a 2D array with 4 rows and 4 columns: ");
+        double[][] data = new double[3][4];
+        for (int i = 0 ; i<data.length ; i++){
+            for (int j = 0 ; j<data[i].length ; j++){
+                data[i][j] = input.nextDouble();
+            }
+        }
+        System.out.printf("Sum of the numbers in the array = %.2f",sumOf2D_Array(data) );
+    }
+}
+
