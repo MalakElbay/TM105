@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class Main {
+    public static double function(int y){
+        if (y<0)
+            return -y;
+        else
+            return Math.sqrt(y);
+    }
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter integers (0 to stop): ");
+        int n = input.nextInt();
+        while(n!=0){
+            System.out.printf("Function(%d) = %.2f\n", n , function(n));
+            n = input.nextInt();
+        }
+
+    }
+}
+
