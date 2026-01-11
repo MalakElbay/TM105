@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter 10 integers: ");
+        int x;
+        int max = -1;
+        int min = 1001;
+        for (int i = 1; i <= 10; i++) {
+            x= input.nextInt();
+            if (x>max)
+                max = x;
+            if (x<min)
+                min=x;
+        }
+        System.out.printf("The maximum integer is: %d%n", max);
+        System.out.printf("The minimum integer is: %d", min);
+    }
+}
