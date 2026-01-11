@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the laptop's brand (\"Done\" to stop): ");
+        int sum = 0;
+        String brand = input.next();
+        while (!brand.equals("Done")){
+            if (brand.equals("Dell"))
+                sum++;
+            System.out.print("Enter the laptop's brand (\"Done\" to stop): ");
+            brand = input.next();
+        }
+        System.out.printf("You have %d dell laptops", sum);
+    }
+}
