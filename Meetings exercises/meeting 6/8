@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class Main {
+    public static String shortestString(String[] arr){
+        String shortest = arr[0];
+        for (int i = 0 ; i<arr.length ; i++){
+            if (arr[i].length()<shortest.length())
+                shortest = arr[i];
+        }
+        return shortest;
+    }
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Insert 10 words: ");
+        String [] words = new String[10];
+        for (int i = 0 ; i<10 ; i++)
+            words[i] = input.next();
+        System.out.printf("The shortest word is %s", shortestString(words));
+    }
+}
