@@ -1,0 +1,14 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter two positive integers: ");
+        int x = input.nextInt();
+        int y = input.nextInt();
+        if (x%y==0)
+            System.out.printf("%d is a multiple of %d", x ,y);
+        else
+            System.out.printf("%d is NOT a multiple of %d", x, y);
+    }
+}
+
