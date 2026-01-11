@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter an integer (0 to stop): ");
+        int n = input.nextInt();
+        int sum = 0;
+        int count = 0;
+        while(n!=0){
+            if (n>0) {
+                sum += n;
+                count++;
+            }
+            System.out.print("Enter an integer (0 to stop): ");
+            n = input.nextInt();
+        }
+        double average = (double)sum/count;
+        System.out.printf("The average of the positive integers entered is: %.2f", average);
+    }
+}
