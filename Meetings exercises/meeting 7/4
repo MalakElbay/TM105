@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class Main {
+    public static boolean identical (int[] arr1, int[] arr2){
+        if (arr1.length!=arr2.length)
+            return false;
+        for (int i = 0 ; i<arr1.length ; i++) {
+            if (arr1[i] != arr2[i])
+                return false;
+        }
+        return true;
+    }
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Insert the first array: ");
+        int[] array1 = new int[10];
+        for (int i = 0 ; i<5 ; i++)
+            array1[i] = input.nextInt();
+        System.out.print("Insert the second array: ");
+        int[] array2 = new int[10];
+        for (int i = 0 ; i<5 ; i++)
+            array2[i] = input.nextInt();
+        if (identical(array1, array2))
+            System.out.print("The two arrays are identical");
+        else
+            System.out.print("The two arrays are NOT identical");
+    }
+}
