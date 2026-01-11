@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the base of the triangle: ");
+        double b = input.nextDouble();
+        System.out.print("Enter the height of triangle: ");
+        double h = input.nextDouble();
+        double area = (.5)*b*h;
+        System.out.printf("Area = %.3f%n", area);
+        if (area >=100 )
+            System.out.print("Triangle is big");
+        else
+            System.out.print("Triangle is small");
+    }
+}
