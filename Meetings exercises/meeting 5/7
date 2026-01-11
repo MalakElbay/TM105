@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("insert a 3-row 4-column array: ");
+        int[][] arr = new int[3][4];
+        int p = 0;
+        int n = 0;
+        int z = 0;
+        for (int i = 0 ; i<3 ; i++){
+            for (int j = 0 ; j<4 ; j++) {
+                arr[i][j] = input.nextInt();
+                if(arr[i][j]>0)
+                    p++;
+                else if (arr[i][j]<0)
+                    n++;
+                else
+                    z++;
+            }
+        }
+        System.out.printf("There are %d positive integers, %d negative integers, %d zeros", p ,n ,z);
+
+
+    }
+}
