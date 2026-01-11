@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Insert your GPA: ");
+        double gpa = input.nextDouble();
+        if (gpa<0 || gpa>4)
+            System.out.print("Error: Invalid input");
+        else if (gpa >= 2)
+            System.out.print("Regular");
+        else if (gpa<2){
+            System.out.print("Insert number of warnings received: ");
+            int w = input.nextInt();
+            if (w<5)
+                System.out.print("Warned");
+            else if (w==5)
+                System.out.print("Dismissed");
+        }
+    }
+
+}
