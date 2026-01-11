@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter two integers: ");
+        int x = input.nextInt();
+        int y = input.nextInt();
+        int sum = 0;
+        for (int i = x ; i<=y ; i++){
+            if (i%2==0)
+                sum+=i;
+            }
+        System.out.printf("Sum of even numbers from %d to %d is %d", x, y, sum);
+        }
+    }
