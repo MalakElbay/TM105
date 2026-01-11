@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int p = 0;
+        int n = 0;
+        System.out.print("Enter an integer (0 to stop): ");
+        int x = input.nextInt();
+        while (x!=0){
+            if (x>0)
+                p++;
+            else
+                n++;
+            System.out.print("Enter an integer (0 to stop): ");
+             x = input.nextInt();
+        }
+        System.out.printf("There are %d positive integers, %d negative integers", p , n);
+    }
+}
