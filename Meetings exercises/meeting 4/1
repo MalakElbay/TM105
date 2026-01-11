@@ -1,0 +1,10 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the length of the side opposite to the 30-degree angle in the triangle: " );
+        int x = input.nextInt();
+        double area = (0.5)*Math.sqrt(3)*Math.pow(x,2);
+        System.out.printf("The area of the triangle is: %.2f", area);
+    }
+}
