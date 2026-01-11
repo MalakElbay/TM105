@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter 10 positive integers: ");
+        int[] arr = new int[10];
+
+        int index = -1;
+        for (int i = 0 ; i<10 ; i++) {
+            arr[i] = input.nextInt();
+        }
+        System.out.print("Enter the integer you want to search for: ");
+        int f = input.nextInt();
+        for (int i = 0 ; i<10 ; i++){
+            if (arr[i] == f) {
+                index = i;
+                break;
+            }
+        }
+        if (index!=-1)
+            System.out.printf("The number is found and its index is %d", index);
+        else
+            System.out.printf("The number is NOT found");
+
+    }
+}
