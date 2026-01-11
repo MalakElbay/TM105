@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("insert a 3-row 4-column array: ");
+        int[][] arr = new int[3][4];
+        int sum = 0;
+        for (int i = 0 ; i<3 ; i++){
+            for (int j = 0 ; j<4 ; j++) {
+                arr[i][j] = input.nextInt();
+            }
+        }
+
+        for (int i = 0 ; i<3 ; i++)
+            sum+=arr[i][0];
+        System.out.printf("The sum of the first column is: %d", sum);
+
+    }
+}
